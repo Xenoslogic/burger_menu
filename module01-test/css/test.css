@@ -49,6 +49,12 @@ section {
   padding: 5px 20px;
   background-color: lavender;
 }
+.section-link {
+  background-color: rebeccapurple;
+  color: #fff;
+  padding: 8px 15px;
+  margin: 0 0 0 10px;
+}
 .box {
   display: flex;
   margin-bottom: 30px;
