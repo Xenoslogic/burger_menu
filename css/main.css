@@ -13,6 +13,9 @@ a {
 img {
   width: 100%;
 }
+ul > li {
+  list-style: none;
+}
 
 .container {
   max-width: 1180px;
@@ -44,7 +47,7 @@ font-family: 'Open Sans', sans-serif; */
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 24px;
   color: #443737;
 }
 .main-header__nav-list-item {
@@ -55,10 +58,10 @@ font-family: 'Open Sans', sans-serif; */
 }
 .main-header__nav-list-item-link {
   border-bottom: 3px solid transparent;
+  border-radius: 1.5px;
 }
 .main-header__active-link {
   border-bottom: 3px solid #ffc725;
-  border-radius: 1.5px;
 }
 .main-header__cart {
   padding: 0 0 0 0;
