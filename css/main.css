@@ -5,6 +5,7 @@
 }
 
 body {
+  font-family: sans-serif;
 }
 a {
   text-decoration: none;
@@ -13,9 +14,14 @@ a {
 img {
   width: 100%;
 }
+ul {
+  margin: 0;
+  padding: 0;
+}
 ul > li {
   list-style: none;
 }
+/* background: background-image || background-position [ / background-size ]? || background-repeat || background-attachment || background-origin || background-clip */
 
 .container {
   max-width: 1180px;
@@ -69,17 +75,19 @@ font-family: 'Open Sans', sans-serif; */
 .main-header__cart-icon {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   margin-right: 10px;
 }
 .main-header__cart-icon::after {
-  content: "5";
+  content: "55";
   position: absolute;
-  top: 9px;
-  left: 20px;
+  bottom: 5px;
+  right: -5px;
   width: 17px;
   height: 17px;
   background-color: #f37335;
   color: #fff;
+  font-weight: 700;
   border-radius: 50%;
   text-align: center;
   font-size: 13px;
@@ -87,10 +95,60 @@ font-family: 'Open Sans', sans-serif; */
 }
 .main-header__cart-sum {
   display: inline-block;
+  vertical-align: middle;
+  margin: 0;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
   line-height: 15px;
   color: #443737;
+}
+
+.main-banner {
+  width: 100%;
+  min-height: 478px;
+  background: url("../img/main-banner.jpg") top center / cover no-repeat;
+}
+.content-box {
+  width: 513px;
+  min-height: 195px;
+  margin: 0 auto;
+  padding: 142px 0 142px 0;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  color: #dedede;
+  text-align: center;
+}
+.breadcrumbs-list__item {
+  display: inline-block;
+  margin-right: 16px;
+}
+.breadcrumbs-list__item:last-child {
+  margin: 0;
+}
+.breadcrumbs-list__item::after {
+  content: "/";
+  position: relative;
+  left: 7px;
+}
+.breadcrumbs-list__item:last-child::after {
+  content: "";
+}
+.main-banner__title {
+  margin: 0;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 79px;
+  line-height: 108px;
+  color: #ffffff;
+}
+.main-banner__text {
+  max-width: 320px;
+  margin: 0 auto;
+  line-height: 24px;
+  color: #faf9f9;
 }
