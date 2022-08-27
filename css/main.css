@@ -7,6 +7,16 @@
 body {
   font-family: sans-serif;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -21,6 +31,10 @@ ul {
 ul > li {
   list-style: none;
 }
+p {
+  margin: 0;
+  padding: 0;
+}
 /* background: background-image || background-position [ / background-size ]? || background-repeat || background-attachment || background-origin || background-clip */
 
 .container {
@@ -34,6 +48,7 @@ font-family: 'Open Sans', sans-serif; */
 /* HEADER */
 .main-header {
   padding: 26px 0;
+  border-bottom: 1px solid #dedede;
 }
 .main-header__container {
   display: flex;
@@ -62,12 +77,24 @@ font-family: 'Open Sans', sans-serif; */
 .main-header__nav-list-item:last-child {
   margin-right: 0;
 }
-.main-header__nav-list-item-link {
-  border-bottom: 3px solid transparent;
+.main-header__nav-list-item-link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
   border-radius: 1.5px;
+  background: transparent;
 }
-.main-header__active-link {
-  border-bottom: 3px solid #ffc725;
+.main-header__nav-list-item-link:hover {
+  color: #ffc725;
+}
+.main-header__active-link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 1.5px;
+  background: #ffc725;
 }
 .main-header__cart {
   padding: 0 0 0 0;
@@ -79,7 +106,7 @@ font-family: 'Open Sans', sans-serif; */
   margin-right: 10px;
 }
 .main-header__cart-icon::after {
-  content: "55";
+  content: "5";
   position: absolute;
   bottom: 5px;
   right: -5px;
@@ -108,6 +135,7 @@ font-family: 'Open Sans', sans-serif; */
 .main-banner {
   width: 100%;
   min-height: 478px;
+  margin: 0 0 130px 0;
   background: url("../img/main-banner.jpg") top center / cover no-repeat;
 }
 .content-box {
@@ -122,9 +150,12 @@ font-family: 'Open Sans', sans-serif; */
   color: #dedede;
   text-align: center;
 }
+.breadcrumbs-list {
+  margin-left: -10px;
+}
 .breadcrumbs-list__item {
   display: inline-block;
-  margin-right: 16px;
+  margin-right: 7px;
 }
 .breadcrumbs-list__item:last-child {
   margin: 0;
@@ -132,18 +163,22 @@ font-family: 'Open Sans', sans-serif; */
 .breadcrumbs-list__item::after {
   content: "/";
   position: relative;
-  left: 7px;
+  left: 3px;
+  pointer-events: none;
 }
 .breadcrumbs-list__item:last-child::after {
   content: "";
 }
+.content-box__breadcrumb-link:hover {
+  color: #ffc725;
+}
 .main-banner__title {
-  margin: 0;
+  margin: 0 0 10px 0;
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 79px;
-  line-height: 108px;
+  line-height: 120px;
   color: #ffffff;
 }
 .main-banner__text {
@@ -151,4 +186,182 @@ font-family: 'Open Sans', sans-serif; */
   margin: 0 auto;
   line-height: 24px;
   color: #faf9f9;
+}
+/* MAIN */
+/* BURGERS-BANNER */
+.burgers-banner {
+  margin: 0 0 100px 0;
+}
+.burgers-banner-box {
+  min-height: 438px;
+  padding: 100px 0 0 100px;
+  background: url("../img/burgers-banner.jpg") top center / cover no-repeat;
+}
+.burgers-banner-box__title span {
+  display: block;
+  padding: 5px 18px;
+  margin: 0 0 9px 0;
+  max-width: 95px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #f37335;
+  border-radius: 14px;
+}
+.burgers-banner-box__title {
+  margin: 0;
+  display: block;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 76px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: transparent;
+  border-radius: 0%;
+}
+.burgers-banner-box__text {
+  max-width: 332px;
+  margin: 0 0 15px 0;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #faf9f9;
+}
+.burgers-banner-box__link {
+  display: block;
+  max-width: 170px;
+  padding: 20px 10px;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1e2f40;
+  background-color: #fbb731;
+  border-radius: 5px;
+}
+/* SECTION BURGERS MENU */
+.burgers-menu {
+  margin: 0 0 100px 0;
+}
+.burgers-menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.burgers-menu__title,
+.addition-menu__title {
+  margin: 0 0 34px 0;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #1b2a49;
+}
+.burgers-menu__select {
+  margin: 0 0 34px 0;
+  padding: 10px 0 10px 30px;
+  flex-basis: 279px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #443737;
+  border: 1px solid #dedede;
+  border-radius: 22px;
+  appearance: none;
+  background: url("../img/chevron-down.png") 95% center / 13px 8px no-repeat;
+  cursor: pointer;
+}
+.burgers-menu__catalog,
+.addition-menu__catalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 50px;
+}
+
+.burgers-menu__item-cover,
+.addition-menu__item-cover {
+  margin: 0 0 20px 0;
+  height: 430px;
+  position: relative;
+  overflow: hidden;
+}
+.burgers-menu__item-cover img,
+.addition-menu__item-cover img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  height: 430px;
+}
+.burgers-menu__item-title,
+.addition-menu__item-title {
+  margin: 0 0 5px 0;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+  color: #1b2a49;
+}
+.burgers-menu__item-price,
+.addition-menu__item-price {
+  margin: 0 0 20px 0;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #979797;
+}
+
+.burgers-menu__item-btn,
+.addition-menu__item-btn {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  padding: 10px 30px 10px 52px;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1e2f40;
+  background: #fbb731;
+  border-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.burgers-menu__item-btn::before,
+.addition-menu__item-btn::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 10px;
+  left: 25px;
+  background: url("../img/btn-cart.svg") top center / cover no-repeat;
+}
+.addition-menu {
+  margin: 0 0 140px 0;
 }
