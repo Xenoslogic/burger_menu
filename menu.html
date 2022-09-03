@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <title>Burgos</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header menu-header" id="page-top">
+      <div class="container menu-header__container">
+        <div class="menu-header__content">
+          <div class="mobile-menu">
+            <button
+              type="button"
+              class="mobile-menu__btn"
+              onclick="openModal()"
+            ></button>
+          </div>
+          <div class="logo menu-header__logo">
+            <a href="./index.html" class="main-header__logo-link"
+              ><img
+                src="./img/main-header-logo.svg"
+                alt="burgos logo"
+                width="176"
+                height="56"
+            /></a>
+          </div>
+          <nav class="nav menu-header__nav">
+            <ul class="menu-header__nav-list">
+              <li class="menu-header__nav-list-item">
+                <a class="menu-header__nav-list-item-link" href="./index.html"
+                  >Главная</a
+                >
+              </li>
+              <li class="menu-header__nav-list-item">
+                <a
+                  class="menu-header__nav-list-item-link menu-header__active-link"
+                  href="./menu.html"
+                  >Меню</a
+                >
+              </li>
+              <li class="menu-header__nav-list-item">
+                <a class="menu-header__nav-list-item-link" href="#">О нас</a>
+              </li>
+              <li class="menu-header__nav-list-item">
+                <a class="menu-header__nav-list-item-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="cart menu-header__cart">
+            <div class="menu-header__cart-icon">
+              <a href="#"
+                ><img
+                  src="./img/shopping-cart.svg"
+                  alt="shopping cart icon"
+                  width="30"
+                  height="26"
+              /></a>
+            </div>
+
+            <p class="menu-header__cart-sum"><span>$</span>125</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- MENU BANNER -->
+    <div class="menu-banner">
+      <div class="container menu-banner__container">
+        <div class="content-box">
+          <ul class="breadcrumbs-list">
+            <li class="breadcrumbs-list__item">
+              <a href="./index.html" class="content-box__breadcrumb-link"
+                >Главная</a
+              >
+            </li>
+            <li class="breadcrumbs-list__item">
+              <a href="./menu.html" class="content-box__breadcrumb-link"
+                >Меню</a
+              >
+            </li>
+          </ul>
+          <h1 class="menu-banner__title">Наше Меню</h1>
+          <p class="menu-banner__text">
+            Выбирай из предложенного ассортимента и мы доставим блюдо в течении
+            часа
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <main class="main menu-main">
+      <div class="burgers-banner">
+        <div class="container burgers-banner__container">
+          <div class="burgers-banner-box">
+            <h2 class="burgers-banner-box__title"><span>скидка</span>-30%</h2>
+            <p class="burgers-banner-box__text">
+              Только при покупке 3-х и более позиций, мы дарим скидку. Акции не
+              суммируются.
+            </p>
+            <a href="#burgers-menu" class="burgers-banner-box__link"
+              >купить сейчас</a
+            >
+          </div>
+        </div>
+      </div>
+      <section class="burgers-menu" id="burgers-menu">
+        <div class="container burgers-menu__container">
+          <div class="burgers-menu__header">
+            <h2 class="burgers-menu__title">бургеры</h2>
+            <select
+              name="burgers-select"
+              id="main-select"
+              class="burgers-menu__select"
+            >
+              <option value="">Сортировать</option>
+              <option value="up">По возрастанию</option>
+              <option value="down">По убыванию</option>
+            </select>
+          </div>
+          <div class="burgers-menu__catalog">
+            <div class="burgers-menu__item">
+              <div class="burgers-menu__item-cover">
+                <img src="./img/menu/01.jpg" alt="острый бургер" />
+              </div>
+              <p class="burgers-menu__item-title">Острый бургер</p>
+              <p class="burgers-menu__item-price">$ 26</p>
+              <button type="button" class="burgers-menu__item-btn">
+                купить
+              </button>
+            </div>
+            <div class="burgers-menu__item">
+              <div class="burgers-menu__item-cover">
+                <img src="./img/menu/02.jpg" alt="Гриль Бургер" />
+              </div>
+              <p class="burgers-menu__item-title">Гриль Бургер</p>
+              <p class="burgers-menu__item-price">$ 16</p>
+              <button type="button" class="burgers-menu__item-btn">
+                купить
+              </button>
+            </div>
+            <div class="burgers-menu__item">
+              <div class="burgers-menu__item-cover">
+                <img src="./img/menu/03.jpg" alt="Бургер Гигант" />
+              </div>
+              <p class="burgers-menu__item-title">Бургер Гигант</p>
+              <p class="burgers-menu__item-price">$ 37</p>
+              <button type="button" class="burgers-menu__item-btn">
+                купить
+              </button>
+            </div>
+            <div class="burgers-menu__item">
+              <div class="burgers-menu__item-cover">
+                <img src="./img/menu/04.jpg" alt="Бургер с курицей" />
+              </div>
+              <p class="burgers-menu__item-title">Бургер с курицей</p>
+              <p class="burgers-menu__item-price">$ 18</p>
+              <button type="button" class="burgers-menu__item-btn">
+                купить
+              </button>
+            </div>
+            <div class="burgers-menu__item">
+              <div class="burgers-menu__item-cover">
+                <img src="./img/menu/05.jpg" alt="Бургер с курицей" />
+              </div>
+              <p class="burgers-menu__item-title">Бургер с курицей</p>
+              <p class="burgers-menu__item-price">$ 9</p>
+              <button type="button" class="burgers-menu__item-btn">
+                купить
+              </button>
+            </div>
+            <div class="burgers-menu__item">
+              <div class="burgers-menu__item-cover">
+                <img src="./img/menu/06.jpg" alt="Тройной бургер" />
+              </div>
+              <p class="burgers-menu__item-title">Тройной бургер</p>
+              <p class="burgers-menu__item-price">$ 7</p>
+              <button type="button" class="burgers-menu__item-btn">
+                купить
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="addition-menu">
+        <div class="container addition-menu__container">
+          <h2 class="addition-menu__title">дополнительно</h2>
+          <div class="addition-menu__catalog">
+            <div class="addition-menu__item">
+              <div class="addition-menu__item-cover">
+                <img src="./img/add-menu/01.jpg" alt="Сэндвич" />
+              </div>
+              <p class="addition-menu__item-title">Сэндвич</p>
+              <p class="addition-menu__item-price">$ 3</p>
+              <button type="button" class="addition-menu__item-btn">
+                купить
+              </button>
+            </div>
+            <div class="addition-menu__item">
+              <div class="addition-menu__item-cover">
+                <img src="./img/add-menu/02.jpg" alt="Картошка Фри" />
+              </div>
+              <p class="addition-menu__item-title">Картошка Фри</p>
+              <p class="addition-menu__item-price">$ 5</p>
+              <button type="button" class="addition-menu__item-btn">
+                купить
+              </button>
+            </div>
+            <div class="addition-menu__item">
+              <div class="addition-menu__item-cover">
+                <img src="./img/add-menu/03.jpg" alt="Хот-Дог" />
+              </div>
+              <p class="addition-menu__item-title">Хот-Дог</p>
+              <p class="addition-menu__item-price">$ 7</p>
+              <button type="button" class="addition-menu__item-btn">
+                купить
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer menu-footer">
+      <div class="container menu-footer__container">
+        <div class="menu-footer-content">
+          <div class="menu-footer__logo">
+            <img src="./img/menu-footer-logo.png" alt="логотип" />
+          </div>
+          <div class="menu-footer__links">
+            <h3 class="menu-footer__links-title">основные ссылки</h3>
+            <ul class="menu-footer__links-list">
+              <li class="menu-footer__links-list-item">
+                <a href="./menu.html">Меню</a>
+              </li>
+              <li class="menu-footer__links-list-item">
+                <a href="#">Заказ и Доставка</a>
+              </li>
+              <li class="menu-footer__links-list-item">
+                <a href="#">Методы оплаты</a>
+              </li>
+              <li class="menu-footer__links-list-item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+            <div class="menu-footer__call-us menu-footer__call-us-tab">
+              <a href="tel:+79007871313">+ 7 900 787 13-13</a>
+              <a href="tel:+79007001414">+ 7 900 700 14-14</a>
+            </div>
+          </div>
+          <div class="menu-footer__contacts">
+            <h3 class="menu-footer__contacts-title">основная информация</h3>
+            <p class="menu-footer__contacts-text">
+              <span>Время</span><br />
+              ПН - ВС<br />
+              11:00 - 22:00 без перерывов
+            </p>
+            <p class="menu-footer__contacts-text">
+              <span>Адрес</span><br />
+              Москва, ул. Тверская, 5
+            </p>
+          </div>
+          <div class="menu-footer__call-us menu-footer__call-us-pc">
+            <a href="tel:+79007871313">+ 7 900 787 13-13</a>
+            <a href="tel:+79007001414">+ 7 900 700 14-14</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a href="#page-top" class="scroll-up-link hidden" id="btnUp">Наверх</a>
+    <!-- MODAL WINDOW -->
+    <div class="modal-mobile-menu" id="modal">
+      <ul class="menu-header__nav-list menu-header__nav-list-mob">
+        <li class="menu-header__nav-list-item menu-header__nav-list-item-mob">
+          <a class="menu-header__nav-list-item-link" href="./index.html"
+            >Главная</a
+          >
+        </li>
+        <li class="menu-header__nav-list-item menu-header__nav-list-item-mob">
+          <a
+            class="menu-header__nav-list-item-link menu-header__active-link"
+            href="./menu.html"
+            >Меню</a
+          >
+        </li>
+        <li class="menu-header__nav-list-item menu-header__nav-list-item-mob">
+          <a class="menu-header__nav-list-item-link" href="#">О нас</a>
+        </li>
+        <li class="menu-header__nav-list-item menu-header__nav-list-item-mob">
+          <a class="menu-header__nav-list-item-link" href="#">Контакты</a>
+        </li>
+      </ul>
+      <button
+        type="button"
+        class="modal-mobile-menu__close-btn"
+        onclick="closeModal()"
+      ></button>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
